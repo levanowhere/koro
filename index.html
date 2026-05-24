@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Filipino Mass – 31 May 2026</title>
+  <title>Filipino Mass – Trinity Sunday</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
 
   <style>
-    /* ═══════════════════════════════════════
-       DESIGN TOKENS — edit to retheme
-       ═══════════════════════════════════════ */
     :root {
-      --yellow:   #F5F65D;
-      --teal:     #0ED6BD;
-      --sky:      #CEF0F9;
-      --white:    #FFFFFF;
-      --dark:     #1a3040;
-      --mid:      #2e5060;
-      --accent:   #0aafa0;
-      --card-bg:  rgba(255,255,255,0.82);
-      --shadow:   0 4px 24px rgba(14,214,189,0.13);
-      --radius:   18px;
+      --yellow: #F5F65D;
+      --teal: #0ED6BD;
+      --sky: #CEF0F9;
+      --white: #FFFFFF;
+      --dark: #1a3040;
+      --mid: #2e5060;
+      --accent: #0aafa0;
+      --card-bg: rgba(255, 255, 255, 0.82);
+      --shadow: 0 4px 24px rgba(14, 214, 189, 0.13);
+      --radius: 18px;
       --font-heading: 'Playfair Display', Georgia, serif;
-      --font-body:    'Lato', sans-serif;
+      --font-body: 'Lato', sans-serif;
     }
 
-    /* ═══════════════ RESET ═══════════════ */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: var(--font-body);
@@ -39,15 +47,14 @@
       color: var(--dark);
     }
 
-    /* ═══════════════ NAVBAR ═══════════════ */
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.72);
+      background: rgba(255, 255, 255, 0.72);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      border-bottom: 2px solid rgba(14,214,189,0.35);
+      border-bottom: 2px solid rgba(14, 214, 189, 0.35);
       padding: 0 1.5rem;
       display: flex;
       align-items: center;
@@ -66,7 +73,6 @@
       white-space: nowrap;
     }
 
-    /* Hamburger (mobile) */
     .nav-toggle {
       display: none;
       background: none;
@@ -89,7 +95,7 @@
       display: block;
       padding: 6px 12px;
       border-radius: 30px;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 700;
       text-decoration: none;
       color: var(--mid);
@@ -97,24 +103,34 @@
       text-transform: uppercase;
       transition: background 0.2s, color 0.2s;
     }
+
     .nav-links a:hover {
       background: var(--teal);
       color: var(--white);
     }
 
     @media (max-width: 700px) {
-      .nav-toggle { display: block; }
+      .nav-toggle {
+        display: block;
+      }
+
       .nav-links {
         display: none;
         width: 100%;
         flex-direction: column;
         padding-bottom: 0.75rem;
       }
-      .nav-links.open { display: flex; }
-      .nav-links a { font-size: 0.9rem; padding: 10px 14px; }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+      }
     }
 
-    /* ═══════════════ HERO HEADER ═══════════════ */
     header {
       text-align: center;
       padding: 3.5rem 1.5rem 2rem;
@@ -124,7 +140,7 @@
       font-size: 2.6rem;
       display: block;
       margin-bottom: 0.5rem;
-      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
     }
 
     header h1 {
@@ -132,7 +148,7 @@
       font-size: clamp(1.8rem, 5vw, 3.2rem);
       color: var(--dark);
       line-height: 1.2;
-      text-shadow: 0 2px 8px rgba(255,255,255,0.7);
+      text-shadow: 0 2px 8px rgba(255, 255, 255, 0.7);
     }
 
     header p.subtitle {
@@ -143,26 +159,26 @@
       letter-spacing: 0.06em;
     }
 
-    /* ═══════════════ MAIN LAYOUT ═══════════════ */
     main {
       max-width: 960px;
       margin: 0 auto;
       padding: 0 1.2rem 4rem;
     }
 
-    /* ═══════════════ SECTION HEADER ═══════════════ */
     .section-divider {
       display: flex;
       align-items: center;
       gap: 1rem;
       margin: 2.5rem 0 1.5rem;
     }
+
     .section-divider h2 {
       font-family: var(--font-heading);
       font-size: 1.35rem;
       color: var(--mid);
       white-space: nowrap;
     }
+
     .section-divider::after {
       content: '';
       flex: 1;
@@ -171,20 +187,26 @@
       border-radius: 99px;
     }
 
-    /* ═══════════════ SONG CARDS ═══════════════ */
     .song-card {
       background: var(--card-bg);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      border: 1.5px solid rgba(14,214,189,0.22);
+      border: 1.5px solid rgba(14, 214, 189, 0.22);
       margin-bottom: 2.5rem;
       overflow: hidden;
       animation: fadeUp 0.5s ease both;
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .song-header {
@@ -196,7 +218,7 @@
     }
 
     .song-number {
-      background: rgba(255,255,255,0.5);
+      background: rgba(255, 255, 255, 0.5);
       border-radius: 50%;
       width: 34px;
       height: 34px;
@@ -221,30 +243,87 @@
       font-weight: 700;
       letter-spacing: 0.07em;
       text-transform: uppercase;
-      background: rgba(255,255,255,0.55);
+      background: rgba(255, 255, 255, 0.55);
       padding: 3px 10px;
       border-radius: 30px;
       color: var(--mid);
       white-space: nowrap;
     }
 
-    .song-body { padding: 1.4rem; }
+    .song-body {
+      padding: 1.4rem;
+    }
 
-    /* ─── YouTube Embed ─── */
     .yt-embed {
       position: relative;
       width: 100%;
-      padding-top: 56.25%; /* 16:9 */
+      padding-top: 56.25%;
       border-radius: 12px;
       overflow: hidden;
       background: var(--dark);
       margin-bottom: 1.2rem;
     }
+
     .yt-embed iframe {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
+    }
+
+    /* Thumbnail link style (no dedicated video) */
+    .yt-embed .yt-thumb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .yt-embed .yt-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .yt-embed .yt-thumb::after {
+      content: '▶';
+      position: absolute;
+      font-size: 3rem;
+      color: white;
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 6px;
+    }
+
+    /* "No video" placeholder */
+    .yt-no-video {
+      width: 100%;
+      border-radius: 12px;
+      background: rgba(14, 214, 189, 0.08);
+      border: 2px dashed rgba(14, 214, 189, 0.4);
+      padding: 2rem 1rem;
+      text-align: center;
+      color: var(--mid);
+      font-size: 0.88rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .yt-no-video span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.4rem;
     }
 
     .label {
@@ -256,12 +335,13 @@
       margin-bottom: 0.4rem;
     }
 
-    /* ─── Audio Player ─── */
-    .audio-section { margin-bottom: 1.2rem; }
+    .audio-section {
+      margin-bottom: 1.2rem;
+    }
 
     .audio-placeholder {
-      background: linear-gradient(90deg, rgba(14,214,189,0.08), rgba(206,240,249,0.3));
-      border: 2px dashed rgba(14,214,189,0.5);
+      background: linear-gradient(90deg, rgba(14, 214, 189, 0.08), rgba(206, 240, 249, 0.3));
+      border: 2px dashed rgba(14, 214, 189, 0.5);
       border-radius: 12px;
       padding: 1rem 1.2rem;
       text-align: center;
@@ -269,9 +349,13 @@
       font-size: 0.88rem;
     }
 
-    .audio-placeholder .upload-icon { font-size: 1.6rem; display: block; }
+    .audio-placeholder .upload-icon {
+      font-size: 1.6rem;
+      display: block;
+    }
+
     .audio-placeholder code {
-      background: rgba(14,214,189,0.15);
+      background: rgba(14, 214, 189, 0.15);
       padding: 2px 6px;
       border-radius: 4px;
       font-size: 0.82rem;
@@ -284,8 +368,6 @@
       accent-color: var(--teal);
     }
 
-    /* ─── Lyrics ─── */
-    .lyrics-section {}
     .lyrics-toggle {
       background: var(--teal);
       color: var(--white);
@@ -302,18 +384,27 @@
       align-items: center;
       gap: 0.4rem;
     }
-    .lyrics-toggle:hover { background: var(--accent); }
-    .lyrics-toggle:active { transform: scale(0.97); }
+
+    .lyrics-toggle:hover {
+      background: var(--accent);
+    }
+
+    .lyrics-toggle:active {
+      transform: scale(0.97);
+    }
 
     .lyrics-box {
       display: none;
       margin-top: 0.9rem;
-      background: linear-gradient(135deg, rgba(245,246,93,0.08), rgba(206,240,249,0.25));
+      background: linear-gradient(135deg, rgba(245, 246, 93, 0.08), rgba(206, 240, 249, 0.25));
       border-left: 4px solid var(--teal);
       border-radius: 0 12px 12px 0;
       padding: 1rem 1.2rem;
     }
-    .lyrics-box.open { display: block; }
+
+    .lyrics-box.open {
+      display: block;
+    }
 
     .lyrics-box pre {
       white-space: pre-wrap;
@@ -324,7 +415,6 @@
       color: var(--dark);
     }
 
-    /* ═══════════════ FOOTER ═══════════════ */
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -333,7 +423,6 @@
       opacity: 0.8;
     }
 
-    /* ═══════════════ BACK TO TOP ═══════════════ */
     .back-top {
       position: fixed;
       bottom: 24px;
@@ -346,542 +435,653 @@
       height: 44px;
       font-size: 1.3rem;
       cursor: pointer;
-      box-shadow: 0 4px 16px rgba(14,214,189,0.4);
+      box-shadow: 0 4px 16px rgba(14, 214, 189, 0.4);
       display: none;
       align-items: center;
       justify-content: center;
       z-index: 200;
       transition: background 0.2s;
     }
-    .back-top:hover { background: var(--accent); }
-    .back-top.visible { display: flex; }
+
+    .back-top:hover {
+      background: var(--accent);
+    }
+
+    .back-top.visible {
+      display: flex;
+    }
   </style>
 </head>
+
 <body>
 
-<!-- ════════════════════════════════
-     NAVIGATION BAR
-     To add a song: copy a <li> and change the href to match the song's id
-     ════════════════════════════════ -->
-<nav aria-label="Song navigation">
-  <a class="nav-brand" href="#top">✝ Filipino Mass</a>
-  <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#song-1">1. Entrance</a></li>
-    <li><a href="#song-2">2. Kyrie</a></li>
-    <li><a href="#song-3">3. Gloria</a></li>
-    <li><a href="#song-4">4. Psalm</a></li>
-    <li><a href="#song-5">5. Gospel Acc.</a></li>
-    <li><a href="#song-6">6. Offertory</a></li>
-    <li><a href="#song-7">7. Santo</a></li>
-    <li><a href="#song-8">8. Lamb of God</a></li>
-    <li><a href="#song-9">9. Communion</a></li>
-    <li><a href="#song-10">10. Recessional</a></li>
-  </ul>
-</nav>
+  <nav aria-label="Song navigation">
+    <a class="nav-brand" href="#top">✝ FPSJ Choir Guide</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#song-1">1. Entrance</a></li>
+      <li><a href="#song-2">2. Kyrie</a></li>
+      <li><a href="#song-3">3. Gospel Acc.</a></li>
+      <li><a href="#song-4">4. Marian</a></li>
+      <li><a href="#song-5">5. Offertory</a></li>
+      <li><a href="#song-6">6. Sanctus</a></li>
+      <li><a href="#song-7">7. Memorial Acc.</a></li>
+      <li><a href="#song-8">8. Amen</a></li>
+      <li><a href="#song-9">9. Lord's Prayer</a></li>
+      <li><a href="#song-10">10. Doxology</a></li>
+      <li><a href="#song-11">11. Agnus Dei</a></li>
+      <li><a href="#song-12">12. Communion</a></li>
+      <li><a href="#song-13">13. Recessional</a></li>
+    </ul>
+  </nav>
 
-<!-- ════════════════════════════════
-     HERO HEADER
-     ════════════════════════════════ -->
-<header id="top">
-  <span class="cross-icon" aria-hidden="true">✝</span>
-  <!--
-    ╔══════════════════════════════╗
-    ║  EDIT: Change the mass title ║
-    ╚══════════════════════════════╝
-  -->
-  <h1>Filipino Mass</h1>
-  <p class="subtitle">31 May 2026 &nbsp;·&nbsp; Song Practice Guide</p>
-</header>
+  <header id="top">
+    <span class="cross-icon" aria-hidden="true">✝</span>
+    <!--
+      ╔══════════════════════════════╗
+      ║  EDIT: Change the mass title ║
+      ╚══════════════════════════════╝
+    -->
+    <h1>Filipino Mass</h1>
+    <p class="subtitle">31 May 2026 &nbsp;·&nbsp; Song Practice Guide<br>
+      <em>(Occasionally Updating)</em>
+    </p>
+  </header>
 
-<main>
-
-  <!-- ════════ SONG 1 ════════ -->
-  <!--
-    HOW TO EDIT A SONG CARD:
-    1. Change the title in .song-title
-    2. Change the role (e.g. "Entrance", "Communion") in .song-role
-    3. Paste your YouTube video ID into the iframe src (replace VIDEO_ID)
-    4. If you have an audio file: replace the placeholder block with:
-         <audio controls src="audio/your-file.mp3"></audio>
-    5. Edit the lyrics inside <pre>...</pre>
-    6. Update the nav link text at the top of the file
-  -->
-  <div class="section-divider"><h2>Songs</h2></div>
-
-  <article class="song-card" id="song-1" style="animation-delay:0.05s">
-    <div class="song-header">
-      <span class="song-number">1</span>
-      <span class="song-title">Entrance Song</span>
-      <span class="song-role">Entrance</span>
+  <main>
+    <div class="section-divider">
+      <h2>Song Lineup</h2>
     </div>
-    <div class="song-body">
-      <p class="label">📺 Tutorial Video</p>
-      <div class="yt-embed">
-        <!-- YouTube video ID: 4B0nxsYk1N4 -->
-        <iframe
-          src="https://www.youtube.com/embed/4B0nxsYk1N4"
-          title="Entrance Song Tutorial"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
+    <div style="font-family: var(--font-heading);">
+      <p>Below are the tutorial videos, practice audios, and lyrics for each song in the Filipino Mass on 31 May 2026.
+        The songs are listed in the order they will be performed during the mass.</p>
+      <br>
+      If "Video Unavailable" is shown, the video is only available in YouTube. Clicking the unavailable link will
+      take
+      you to the video. If further assistance is needed, you may seek assitance in our group chat.
+      <br><br>
+    </div>
+
+    <!-- ════════ SONG 1 – ENTRANCE ════════ -->
+    <article class="song-card" id="song-1" style="animation-delay:0.05s">
+      <div class="song-header">
+        <span class="song-number">1</span>
+        <span class="song-title">Entrance Song</span>
+        <span class="song-role">Entrance</span>
       </div>
-
-      <div class="audio-section">
-        <p class="label">🎵 Instrumental Practice Audio</p>
-        <!--
-          OPTION A – File in the /audio/ folder:
-            <audio controls src="audio/entrance-song.mp3"></audio>
-
-          OPTION B – No file yet (shows upload reminder):
-            Leave the placeholder block below as-is.
-        -->
-        <div class="audio-placeholder">
-          <span class="upload-icon">🎼</span>
-          Add instrumental file: put it in the <code>audio/</code> folder,<br>
-          then replace this block with:<br>
-          <code>&lt;audio controls src="audio/entrance-song.mp3"&gt;&lt;/audio&gt;</code>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-no-video">
+          <span>🎬</span>
+          No tutorial video yet. Add a YouTube video ID here when available.
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <div class="audio-placeholder">
+            <span class="upload-icon">🎼</span>
+            Add instrumental file: put it in the <code>audio/</code> folder,<br>
+            then replace this block with:<br>
+            <code>&lt;audio controls src="audio/entrance.mp3"&gt;&lt;/audio&gt;</code>
+          </div>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>[No available lyrics yet]</pre>
+          </div>
         </div>
       </div>
+    </article>
 
-      <div class="lyrics-section">
-        <p class="label">📜 Lyrics</p>
-        <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
-          <span>▼</span> Show Lyrics
-        </button>
-        <div class="lyrics-box">
-          <pre>
-[Paste lyrics for Song 1 here]
+    <!-- ════════ SONG 2 – KYRIE ════════ -->
+    <article class="song-card" id="song-2" style="animation-delay:0.10s">
+      <div class="song-header">
+        <span class="song-number">2</span>
+        <span class="song-title">Panginoon, Maawa Ka Sa Amin</span>
+        <span class="song-role">Kyrie</span>
+      </div>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-no-video">
+          <span>🎬</span>
+          No tutorial video yet. Add a YouTube video ID here when available.
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <div class="audio-placeholder">
+            <span class="upload-icon">🎼</span>
+            Add instrumental file: put it in the <code>audio/</code> folder,<br>
+            then replace this block with:<br>
+            <code>&lt;audio controls src="audio/kyrie.mp3"&gt;&lt;/audio&gt;</code>
+          </div>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>Solo: Ikaw na nag-aalis ng mga kasalanan ng
+          mundo. Panginoon, maawa ka sa amin.
+All: Panginoon, maawa ka sa amin.
 
-Verse 1:
-...
+Solo: Ika'y tagahilom naming makasalanan.
+          O Kristo, maawa ka sa amin.
+All: O Kristo, maawa ka sa amin.
 
-Chorus:
-...
-          </pre>
+Solo: Ika'y tagapamagitan ng Diyos at ng bayan.
+          Panginoon, maawa ka sa amin.
+All: Panginoon, maawa ka sa amin.</pre>
+          </div>
         </div>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <!-- ════════ SONG 2 ════════ -->
-  <article class="song-card" id="song-2" style="animation-delay:0.10s">
-    <div class="song-header">
-      <span class="song-number">2</span>
-      <span class="song-title">Kyrie</span>
-      <span class="song-role">Penitential Rite</span>
-    </div>
-    <div class="song-body">
-      <p class="label">📺 Tutorial Video</p>
-      <div class="yt-embed">
-        <!-- YouTube video ID: B37xeQWjOvg -->
-        <iframe
-          src="https://www.youtube.com/embed/B37xeQWjOvg"
-          title="Kyrie Tutorial"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy">
-        </iframe>
+    <!-- ════════ SONG 3 – GOSPEL ACCLAMATION ════════ -->
+    <article class="song-card" id="song-3" style="animation-delay:0.15s">
+      <div class="song-header">
+        <span class="song-number">3</span>
+        <span class="song-title">Celtic Alleluia</span>
+        <span class="song-role">Gospel Acc.</span>
       </div>
-      <div class="audio-section">
-        <p class="label">🎵 Instrumental Practice Audio</p>
-        <div class="audio-placeholder">
-          <span class="upload-icon">🎼</span>
-          Add instrumental file: put it in the <code>audio/</code> folder,<br>
-          then replace this block with:<br>
-          <code>&lt;audio controls src="audio/kyrie.mp3"&gt;&lt;/audio&gt;</code>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-embed">
+          <!-- YouTube video ID: 4B0nxsYk1N4 -->
+          <iframe src="https://www.youtube.com/embed/4B0nxsYk1N4?si=bbX3cNcaG1pXzAUK" title="Celtic Alleluia Tutorial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <audio controls src="audio/[3] Celtic Alleluia - (Piano Instrumental, Chords).mp3"></audio>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>Alleluia, alleluia,
+alleluia, alleluia!</pre>
+          </div>
         </div>
       </div>
-      <div class="lyrics-section">
-        <p class="label">📜 Lyrics</p>
-        <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
-          <span>▼</span> Show Lyrics
-        </button>
-        <div class="lyrics-box">
-          <pre>
-[Paste lyrics for Kyrie here]
+    </article>
 
-Kyrie eleison...
-          </pre>
+    <!-- ════════ SONG 4 – MARIAN SONG ════════ -->
+    <article class="song-card" id="song-4" style="animation-delay:0.20s">
+      <div class="song-header">
+        <span class="song-number">4</span>
+        <span class="song-title">On This Day, O Beautiful Mother</span>
+        <span class="song-role">Marian Song</span>
+      </div>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-embed">
+          <!-- YouTube video ID: B37xeQWjOvg -->
+          <iframe src="https://www.youtube.com/embed/B37xeQWjOvg?si=CLZfRGIqnnuKhv5n"
+            title="On This Day O Beautiful Mother Tutorial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <audio controls
+            src="audio/[4] On This Day, O Beautiful Mother  SATB Choir w Lyrics Mary, Mother of God  Sunday 7pm Choir.mp3"></audio>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>
+On this day, O beautiful Mother,
+On this day we give thee our love.
+Near the, Madonna, fondly we hover,
+Trusting thy gentle care to prove.
+
+On this day we ask to share,
+Dearest Mother, thy sweet care;
+Aid us ere our feet astray
+Waner from thy guiding way.
+
+On this day, O beautiful Mother,
+On this day we give thee our love.
+Near the, Madonna, fondly we hover,
+Trusting thy gentle care to prove.
+
+Queen of angels, deign to hear
+Lisping children's humble prayer;
+Young hearts gain, O virgin pure,
+Sweetly to thyself allure.
+
+On this day, O beautiful Mother,
+On this day we give thee our love.
+Near the, Madonna, fondly we hover,
+Trusting thy gentle care to prove.
+
+On this day we give thee our love.</pre>
+          </div>
         </div>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <!-- ════════ SONG 3 ════════ -->
-  <article class="song-card" id="song-3" style="animation-delay:0.15s">
-    <div class="song-header">
-      <span class="song-number">3</span>
-      <span class="song-title">Gloria</span>
-      <span class="song-role">Gloria</span>
-    </div>
-    <div class="song-body">
-      <p class="label">📺 Tutorial Video</p>
-      <div class="yt-embed">
-        <!-- YouTube video ID: 38wfL7SOQZo -->
-        <iframe
-          src="https://www.youtube.com/embed/38wfL7SOQZo"
-          title="Gloria Tutorial"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy">
-        </iframe>
+    <!-- ════════ SONG 5 – OFFERTORY ════════ -->
+    <article class="song-card" id="song-5" style="animation-delay:0.25s">
+      <div class="song-header">
+        <span class="song-number">5</span>
+        <span class="song-title">Offertory Song</span>
+        <span class="song-role">Offertory</span>
       </div>
-      <div class="audio-section">
-        <p class="label">🎵 Instrumental Practice Audio</p>
-        <div class="audio-placeholder">
-          <span class="upload-icon">🎼</span>
-          Add instrumental file: put it in the <code>audio/</code> folder,<br>
-          then replace this block with:<br>
-          <code>&lt;audio controls src="audio/gloria.mp3"&gt;&lt;/audio&gt;</code>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-no-video">
+          <span>🎬</span>
+          No tutorial video yet. Add a YouTube video ID here when available.
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <div class="audio-placeholder">
+            <span class="upload-icon">🎼</span>
+            Add instrumental file: put it in the <code>audio/</code> folder,<br>
+            then replace this block with:<br>
+            <code>&lt;audio controls src="audio/offertory.mp3"&gt;&lt;/audio&gt;</code>
+          </div>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>[No available lyrics yet]</pre>
+          </div>
         </div>
       </div>
-      <div class="lyrics-section">
-        <p class="label">📜 Lyrics</p>
-        <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
-          <span>▼</span> Show Lyrics
-        </button>
-        <div class="lyrics-box">
-          <pre>
-[Paste lyrics for Gloria here]
+    </article>
 
-Luwalhati sa Dios...
-          </pre>
+    <!-- ════════ SONG 6 – SANCTUS ════════ -->
+    <article class="song-card" id="song-6" style="animation-delay:0.30s">
+      <div class="song-header">
+        <span class="song-number">6</span>
+        <span class="song-title">Santo Santo Santo</span>
+        <span class="song-role">Sanctus</span>
+      </div>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-embed">
+          <!-- YouTube video ID: 38wfL7SOQZo -->
+          <iframe src="https://www.youtube.com/embed/38wfL7SOQZo?si=gmXb_xbmuHR5rQ-J" title="Santo Tutorial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <audio controls src="audio/[5] SANTO - Tinapay ng Buhay Vol 1.mp3"></audio>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>Santo! Santo! Santo! Panginoong Diyos!
+Napupuno ang langit at lupa ng kadakilaan mo!
+
+Hosanna Hosanna Hosanna sa Kaitaasan!
+Hosanna Hosanna Hosanna sa Kaitaasan!
+
+Pinagpala ang naparirito Sa Ngalan ng Panginoon!
+
+Hosanna Hosanna Hosanna sa Kaitaasan!
+Hosanna Hosanna Hosanna sa Kaitaasan!</pre>
+          </div>
         </div>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <!-- ════════ SONG 4 ════════ -->
-  <article class="song-card" id="song-4" style="animation-delay:0.20s">
-    <div class="song-header">
-      <span class="song-number">4</span>
-      <span class="song-title">Responsorial Psalm</span>
-      <span class="song-role">Psalm</span>
-    </div>
-    <div class="song-body">
-      <p class="label">📺 Tutorial Video</p>
-      <div class="yt-embed">
-        <!-- YouTube video ID: Pdy8Kavasao -->
-        <iframe
-          src="https://www.youtube.com/embed/Pdy8Kavasao"
-          title="Responsorial Psalm Tutorial"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy">
-        </iframe>
+    <!-- ════════ SONG 7 – MEMORIAL ACCLAMATION ════════ -->
+    <article class="song-card" id="song-7" style="animation-delay:0.35s">
+      <div class="song-header">
+        <span class="song-number">7</span>
+        <span class="song-title">Sa Krus Mo at Pagkabuhay</span>
+        <span class="song-role">Memorial Acc.</span>
       </div>
-      <div class="audio-section">
-        <p class="label">🎵 Instrumental Practice Audio</p>
-        <div class="audio-placeholder">
-          <span class="upload-icon">🎼</span>
-          Add instrumental file: put it in the <code>audio/</code> folder,<br>
-          then replace this block with:<br>
-          <code>&lt;audio controls src="audio/psalm.mp3"&gt;&lt;/audio&gt;</code>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-embed">
+          <!-- YouTube video ID: Pdy8Kavasao -->
+          <iframe src="https://www.youtube.com/embed/Pdy8Kavasao?si=RpNo082iK2NNjoL1" title="Sa Krus Mo Tutorial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <audio controls src="audio/[6] Sa Krus Mo (Tinapay ng Buhay) piano.mp3"></audio>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>Sa Krus Mo at pagkabuhay
+Kami'y natubos Mong tunay.
+Poong Hesus naming mahal
+Iligtas Mo kaming tanan.
+Poong Hesus naming mahal
+Ngayon at magpa-kailanman.</pre>
+          </div>
         </div>
       </div>
-      <div class="lyrics-section">
-        <p class="label">📜 Lyrics</p>
-        <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
-          <span>▼</span> Show Lyrics
-        </button>
-        <div class="lyrics-box">
-          <pre>
-[Paste lyrics / psalm response here]
-          </pre>
+    </article>
+
+    <!-- ════════ SONG 8 – AMEN ════════ -->
+    <article class="song-card" id="song-8" style="animation-delay:0.40s">
+      <div class="song-header">
+        <span class="song-number">8</span>
+        <span class="song-title">Amen</span>
+        <span class="song-role">Amen</span>
+      </div>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-embed">
+          <!-- YouTube video ID: iicyjFXfjgY -->
+          <iframe src="https://www.youtube.com/embed/iicyjFXfjgY?si=prGsbhRDH58Rzkvq" title="Amen Tutorial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <audio controls src="audio/[7] Amen.mp3"></audio>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>A-men, A-men, A - - - men!
+A-men, A-men, A - - - men!</pre>
+          </div>
         </div>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <!-- ════════ SONG 5 ════════ -->
-  <article class="song-card" id="song-5" style="animation-delay:0.25s">
-    <div class="song-header">
-      <span class="song-number">5</span>
-      <span class="song-title">Gospel Acclamation</span>
-      <span class="song-role">Gospel Acc.</span>
-    </div>
-    <div class="song-body">
-      <p class="label">📺 Tutorial Video</p>
-      <div class="yt-embed">
-        <!-- YouTube video ID: iicyjFXfjgY -->
-        <iframe
-          src="https://www.youtube.com/embed/iicyjFXfjgY"
-          title="Gospel Acclamation Tutorial"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy">
-        </iframe>
+    <!-- ════════ SONG 9 – LORD'S PRAYER ════════ -->
+    <article class="song-card" id="song-9" style="animation-delay:0.45s">
+      <div class="song-header">
+        <span class="song-number">9</span>
+        <span class="song-title">Ama Namin</span>
+        <span class="song-role">Lord's Prayer</span>
       </div>
-      <div class="audio-section">
-        <p class="label">🎵 Instrumental Practice Audio</p>
-        <div class="audio-placeholder">
-          <span class="upload-icon">🎼</span>
-          Add instrumental file: put it in the <code>audio/</code> folder,<br>
-          then replace this block with:<br>
-          <code>&lt;audio controls src="audio/gospel-acclamation.mp3"&gt;&lt;/audio&gt;</code>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-embed">
+          <!-- YouTube video ID: pLQFnSYgD1A -->
+          <iframe src="https://www.youtube.com/embed/pLQFnSYgD1A?si=kOT0Ecb8W_tm7xNg" title="Ama Namin Tutorial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <audio controls src="audio/[8] Ama Namin (Manoling Francisco)  Piano, Chords, Notes, Lyrics.mp3"></audio>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>Ama namin sumasalangit Ka.
+Sambahin ang ngalan Mo.
+Mapasaamin ang kaharian Mo.
+Sundin ang loob Mo
+Dito sa lupa para nang sa langit.
+
+Bigyan Mo po kami
+Ngayon ng aming kakanin sa araw-araw;
+At patawarin Mo ang aming mga sala
+Para nang pagpapatawad naming
+Sa nagkakasala sa amin.
+At huwag Mo po kaming ipahintulot sa tukso,
+At i-adya Mo kami sa lahat ng masama.</pre>
+          </div>
         </div>
       </div>
-      <div class="lyrics-section">
-        <p class="label">📜 Lyrics</p>
-        <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
-          <span>▼</span> Show Lyrics
-        </button>
-        <div class="lyrics-box">
-          <pre>
-[Paste Gospel Acclamation / Alleluia lyrics here]
-          </pre>
+    </article>
+
+    <!-- ════════ SONG 10 – DOXOLOGY ════════ -->
+    <article class="song-card" id="song-10" style="animation-delay:0.50s">
+      <div class="song-header">
+        <span class="song-number">10</span>
+        <span class="song-title">Sapagkat Sa'yo ang Kaharian</span>
+        <span class="song-role">Doxology</span>
+      </div>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-embed">
+          <!-- YouTube video ID: Flh6vQ2w8Gw -->
+          <iframe src="https://www.youtube.com/embed/Flh6vQ2w8Gw?si=SZm4FkpUSqPql5ug" title="Doxology Tutorial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <audio controls src="audio/[9] Sapagkat Sa'yo ang Kaharian.mp3"></audio>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>Sapagkat sa'yo ang Kaharian,
+Kapangyarihan at Kapurihan
+Ngayon at Magpakailanman,
+Ngayon at Magpakailanman</pre>
+          </div>
         </div>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <!-- ════════ SONG 6 ════════ -->
-  <article class="song-card" id="song-6" style="animation-delay:0.30s">
-    <div class="song-header">
-      <span class="song-number">6</span>
-      <span class="song-title">Offertory Song</span>
-      <span class="song-role">Offertory</span>
-    </div>
-    <div class="song-body">
-      <p class="label">📺 Tutorial Video</p>
-      <div class="yt-embed">
-        <!-- YouTube video ID: pLQFnSYgD1A -->
-        <iframe
-          src="https://www.youtube.com/embed/pLQFnSYgD1A"
-          title="Offertory Song Tutorial"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy">
-        </iframe>
+    <!-- ════════ SONG 11 – AGNUS DEI ════════ -->
+    <article class="song-card" id="song-11" style="animation-delay:0.55s">
+      <div class="song-header">
+        <span class="song-number">11</span>
+        <span class="song-title">Kordero ng Diyos</span>
+        <span class="song-role">Agnus Dei</span>
       </div>
-      <div class="audio-section">
-        <p class="label">🎵 Instrumental Practice Audio</p>
-        <div class="audio-placeholder">
-          <span class="upload-icon">🎼</span>
-          Add instrumental file: put it in the <code>audio/</code> folder,<br>
-          then replace this block with:<br>
-          <code>&lt;audio controls src="audio/offertory.mp3"&gt;&lt;/audio&gt;</code>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-embed">
+          <!-- YouTube video ID: CLpfTTVAEYQ -->
+          <iframe src="https://www.youtube.com/embed/CLpfTTVAEYQ?si=7ZxZhpbnPP8ZUd1h" title="Kordero ng Diyos Tutorial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <audio controls src="audio/[10] Kordero ng Diyos.mp3"></audio>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>Kordero ng Diyos na nag-aalis
+Ng mga kasalanan ng Sanlibutan,
+Maawa Ka sa amin! Maawa Ka sa amin.
+
+Kordero ng Diyos na nag-aalis
+Ng mga kasalanan ng Sanlibutan,
+Maawa Ka sa amin! Maawa Ka sa amin.
+
+Kordero ng Diyos na nag-aalis
+Ng mga kasalanan ng Sanlibutan,
+Ipagkaloob Mo sa amin, ang kapayapa-an!</pre>
+          </div>
         </div>
       </div>
-      <div class="lyrics-section">
-        <p class="label">📜 Lyrics</p>
-        <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
-          <span>▼</span> Show Lyrics
-        </button>
-        <div class="lyrics-box">
-          <pre>
-[Paste Offertory Song lyrics here]
-          </pre>
+    </article>
+
+    <!-- ════════ SONG 12 – COMMUNION ════════ -->
+    <article class="song-card" id="song-12" style="animation-delay:0.60s">
+      <div class="song-header">
+        <span class="song-number">12</span>
+        <span class="song-title">Tinapay ng Buhay</span>
+        <span class="song-role">Communion</span>
+      </div>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-embed">
+          <!-- YouTube video ID: 9aqkW1W6Aw0 -->
+          <iframe src="https://www.youtube.com/embed/9aqkW1W6Aw0?si=oIer32anVQaEHMOl" title="Tinapay ng Buhay Tutorial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <audio controls src="audio/[11] Tinapay ng Buhay.mp3"></audio>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>Ikaw, Hesus, ang tinapay ng buhay
+Binasbasan, hinati't inialay
+Buhay na ganap ang sa ami'y kaloob
+At pagsasalong walang-hanggan
+
+Basbasan ang buhay naming handog
+Nawa'y matulad sa pag-aalay Mo
+Buhay na laan nang lubos
+Sa mundong sa pag-ibig ay kapos
+
+Ikaw, Hesus, ang tinapay ng buhay
+Binasbasan, hinati't inialay
+Buhay na ganap ang sa ami'y kaloob
+At pagsasalong walang-hanggan
+
+Marapatin sa kapwa maging tinapay
+Kagalakan sa nalulumbay
+Katarungan sa naaapi
+At kanlungan ng bayan Mong sawi
+
+Ikaw, Hesus, ang tinapay ng buhay
+Binasbasan, hinati't inialay
+Buhay na ganap ang sa ami'y kaloob
+At pagsasalong walang-hanggan
+
+At pagsasalong walang-hanggan</pre>
+          </div>
         </div>
       </div>
-    </div>
-  </article>
+    </article>
 
-  <!-- ════════ SONG 7 ════════ -->
-  <article class="song-card" id="song-7" style="animation-delay:0.35s">
-    <div class="song-header">
-      <span class="song-number">7</span>
-      <span class="song-title">Santo (Sanctus)</span>
-      <span class="song-role">Sanctus</span>
-    </div>
-    <div class="song-body">
-      <p class="label">📺 Tutorial Video</p>
-      <div class="yt-embed">
-        <!-- YouTube video ID: 3E_OkH_favY -->
-        <iframe
-          src="https://www.youtube.com/embed/3E_OkH_favY"
-          title="Santo Tutorial"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy">
-        </iframe>
+    <!-- ════════ SONG 13 – RECESSIONAL ════════ -->
+    <article class="song-card" id="song-13" style="animation-delay:0.65s">
+      <div class="song-header">
+        <span class="song-number">13</span>
+        <span class="song-title">Magpasalamat Kayo sa Panginoon</span>
+        <span class="song-role">Recessional</span>
       </div>
-      <div class="audio-section">
-        <p class="label">🎵 Instrumental Practice Audio</p>
-        <div class="audio-placeholder">
-          <span class="upload-icon">🎼</span>
-          Add instrumental file: put it in the <code>audio/</code> folder,<br>
-          then replace this block with:<br>
-          <code>&lt;audio controls src="audio/santo.mp3"&gt;&lt;/audio&gt;</code>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-embed">
+          <!-- YouTube video ID: 42k0rb-cnf8 -->
+          <iframe src="https://www.youtube.com/embed/42k0rb-cnf8?si=M5EuX8J6nR_9Y3Rv"
+            title="Magpasalamat Kayo sa Panginoon Tutorial"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <audio controls
+            src="audio/[12] Magpasalamat kayo sa Panginoon - Recessional song Instrumental with Lyrics.mp3"></audio>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>
+[Verse 1]
+Magpasalamat kayo sa Panginoon
+Na S'yang lumikha ng lahat ng bagay dito sa mundo
+Siya’y gumawa ng buwan at mga bituin
+Upang magbigay ng liwanag sa pagsapit ng dilim
+
+[Chorus 1]
+O, magpasalamat sa kanyang mga biyaya at awa
+
+[Verse 2]
+Magpasalamat kayo sa Panginoon
+Dahil sa kagandahang loob niya’y magpakailanman
+At pagpalain ng Diyos habang buhay
+Na siyang nagligtas sa Kanyang hinirang bayang Israel
+
+[Chorus 2]
+O, ating purihin ang Poon na mahabagin sa atin
+
+[Coda]
+O, magpasalamat sa Kanyang mga biyaya at awa
+At ating purihin ang Poon na mahabagin sa atin
+O, magpasalamat sa Kanyang mga biyaya at awa</pre>
+          </div>
         </div>
       </div>
-      <div class="lyrics-section">
-        <p class="label">📜 Lyrics</p>
-        <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
-          <span>▼</span> Show Lyrics
-        </button>
-        <div class="lyrics-box">
-          <pre>
-[Paste Santo / Sanctus lyrics here]
+    </article>
 
-Santo, Santo, Santo...
-          </pre>
-        </div>
-      </div>
-    </div>
-  </article>
+  </main>
 
-  <!-- ════════ SONG 8 ════════ -->
-  <article class="song-card" id="song-8" style="animation-delay:0.40s">
-    <div class="song-header">
-      <span class="song-number">8</span>
-      <span class="song-title">Lamb of God (Kordero ng Diyos)</span>
-      <span class="song-role">Agnus Dei</span>
-    </div>
-    <div class="song-body">
-      <p class="label">📺 Tutorial Video</p>
-      <div class="yt-embed">
-        <!-- YouTube video ID: CLpfTTVAEYQ -->
-        <iframe
-          src="https://www.youtube.com/embed/CLpfTTVAEYQ"
-          title="Lamb of God Tutorial"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy">
-        </iframe>
-      </div>
-      <div class="audio-section">
-        <p class="label">🎵 Instrumental Practice Audio</p>
-        <div class="audio-placeholder">
-          <span class="upload-icon">🎼</span>
-          Add instrumental file: put it in the <code>audio/</code> folder,<br>
-          then replace this block with:<br>
-          <code>&lt;audio controls src="audio/lamb-of-god.mp3"&gt;&lt;/audio&gt;</code>
-        </div>
-      </div>
-      <div class="lyrics-section">
-        <p class="label">📜 Lyrics</p>
-        <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
-          <span>▼</span> Show Lyrics
-        </button>
-        <div class="lyrics-box">
-          <pre>
-[Paste Lamb of God lyrics here]
+  <footer>
+    <p>✝ Made for the Filipino Mass Community &nbsp;·&nbsp; Levi</p>
+  </footer>
 
-Kordero ng Diyos...
-          </pre>
-        </div>
-      </div>
-    </div>
-  </article>
+  <button class="back-top" id="backTop" title="Back to top" aria-label="Back to top">↑</button>
 
-  <!-- ════════ SONG 9 ════════ -->
-  <article class="song-card" id="song-9" style="animation-delay:0.45s">
-    <div class="song-header">
-      <span class="song-number">9</span>
-      <span class="song-title">Communion Song</span>
-      <span class="song-role">Communion</span>
-    </div>
-    <div class="song-body">
-      <p class="label">📺 Tutorial Video</p>
-      <div class="yt-embed">
-        <!-- YouTube video ID: 9aqkW1W6Aw0 -->
-        <iframe
-          src="https://www.youtube.com/embed/9aqkW1W6Aw0"
-          title="Communion Song Tutorial"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy">
-        </iframe>
-      </div>
-      <div class="audio-section">
-        <p class="label">🎵 Instrumental Practice Audio</p>
-        <div class="audio-placeholder">
-          <span class="upload-icon">🎼</span>
-          Add instrumental file: put it in the <code>audio/</code> folder,<br>
-          then replace this block with:<br>
-          <code>&lt;audio controls src="audio/communion.mp3"&gt;&lt;/audio&gt;</code>
-        </div>
-      </div>
-      <div class="lyrics-section">
-        <p class="label">📜 Lyrics</p>
-        <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
-          <span>▼</span> Show Lyrics
-        </button>
-        <div class="lyrics-box">
-          <pre>
-[Paste Communion Song lyrics here]
-          </pre>
-        </div>
-      </div>
-    </div>
-  </article>
-
-  <!-- ════════ SONG 10 ════════ -->
-  <article class="song-card" id="song-10" style="animation-delay:0.50s">
-    <div class="song-header">
-      <span class="song-number">10</span>
-      <span class="song-title">Recessional Song</span>
-      <span class="song-role">Recessional</span>
-    </div>
-    <div class="song-body">
-      <p class="label">📺 Tutorial Video</p>
-      <div class="yt-embed">
-        <!-- YouTube video ID: TQLD0v-cEM8 -->
-        <iframe
-          src="https://www.youtube.com/embed/TQLD0v-cEM8"
-          title="Recessional Song Tutorial"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy">
-        </iframe>
-      </div>
-      <div class="audio-section">
-        <p class="label">🎵 Instrumental Practice Audio</p>
-        <div class="audio-placeholder">
-          <span class="upload-icon">🎼</span>
-          Add instrumental file: put it in the <code>audio/</code> folder,<br>
-          then replace this block with:<br>
-          <code>&lt;audio controls src="audio/recessional.mp3"&gt;&lt;/audio&gt;</code>
-        </div>
-      </div>
-      <div class="lyrics-section">
-        <p class="label">📜 Lyrics</p>
-        <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
-          <span>▼</span> Show Lyrics
-        </button>
-        <div class="lyrics-box">
-          <pre>
-[Paste Recessional Song lyrics here]
-          </pre>
-        </div>
-      </div>
-    </div>
-  </article>
-
-</main>
-
-<footer>
-  <p>✝ Made with love for the Filipino Mass Community &nbsp;·&nbsp; 31 May 2026</p>
-</footer>
-
-<button class="back-top" id="backTop" title="Back to top" aria-label="Back to top">↑</button>
-
-<script>
-  /* ─── Hamburger menu ─── */
-  document.getElementById('navToggle').addEventListener('click', function () {
-    const links = document.getElementById('navLinks');
-    links.classList.toggle('open');
-    this.textContent = links.classList.contains('open') ? '✕' : '☰';
-  });
-
-  /* Close menu on link click (mobile) */
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => {
-      document.getElementById('navLinks').classList.remove('open');
-      document.getElementById('navToggle').textContent = '☰';
+  <script>
+    /* ─── Hamburger menu ─── */
+    document.getElementById('navToggle').addEventListener('click', function () {
+      const links = document.getElementById('navLinks');
+      links.classList.toggle('open');
+      this.textContent = links.classList.contains('open') ? '✕' : '☰';
     });
-  });
 
-  /* ─── Lyrics toggle ─── */
-  function toggleLyrics(btn) {
-    const box = btn.nextElementSibling;
-    const isOpen = box.classList.toggle('open');
-    btn.setAttribute('aria-expanded', isOpen);
-    btn.querySelector('span').textContent = isOpen ? '▲' : '▼';
-    btn.childNodes[1].textContent = isOpen ? ' Hide Lyrics' : ' Show Lyrics';
-  }
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+        document.getElementById('navToggle').textContent = '☰';
+      });
+    });
 
-  /* ─── Back to top button ─── */
-  const backTop = document.getElementById('backTop');
-  window.addEventListener('scroll', () => {
-    backTop.classList.toggle('visible', window.scrollY > 400);
-  });
-  backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-</script>
+    /* ─── Lyrics toggle ─── */
+    function toggleLyrics(btn) {
+      const box = btn.nextElementSibling;
+      const isOpen = box.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.querySelector('span').textContent = isOpen ? '▲' : '▼';
+      btn.lastChild.textContent = isOpen ? ' Hide Lyrics' : ' Show Lyrics';
+    }
+
+    /* ─── Back to top button ─── */
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', () => {
+      backTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 
 </body>
+
 </html>
