@@ -4,502 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Filipino Mass – Trinity Sunday</title>
+  <title>FPSJ - Choir Group</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 
   <style>
-    :root {
-      --yellow: #F5F65D;
-      --teal: #0ED6BD;
-      --sky: #CEF0F9;
-      --white: #FFFFFF;
-      --dark: #1a3040;
-      --mid: #2e5060;
-      --accent: #0aafa0;
-      --card-bg: rgba(255, 255, 255, 0.82);
-      --shadow: 0 4px 24px rgba(14, 214, 189, 0.13);
-      --radius: 18px;
-      --font-heading: 'Playfair Display', Georgia, serif;
-      --font-body: 'Lato', sans-serif;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--font-body);
-      background: linear-gradient(135deg, var(--sky) 0%, var(--yellow) 45%, var(--teal) 100%);
-      background-attachment: fixed;
-      min-height: 100vh;
-      color: var(--dark);
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.72);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 2px solid rgba(14, 214, 189, 0.35);
-      padding: 0 1.5rem;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      align-items: center;
-      gap: 0.75rem;
-      min-height: 60px;
-    }
-
-    .nav-brand {
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--mid);
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: 2px solid var(--teal);
-      border-radius: 8px;
-      padding: 6px 10px;
-      cursor: pointer;
-      font-size: 1.2rem;
-      color: var(--mid);
-    }
-
-    /* Keep the toggle aligned to the right grid cell and size to its content */
-    .nav-toggle {
-      justify-self: end;
-      width: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      gap: 0.25rem;
-      list-style: none;
-      /* Ensure links wrap inside the right-hand column rather than under the brand */
-      width: 100%;
-    }
-
-    .nav-links a {
-      display: block;
-      padding: 6px 12px;
-      border-radius: 30px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-decoration: none;
-      color: var(--mid);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .nav-links a:hover {
-      background: var(--teal);
-      color: var(--white);
-    }
-
-    @media (max-width: 700px) {
-
-      /* Use a simple flex layout on small screens so brand stays left and toggle remains compact on the right */
-      nav {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        position: relative;
-        /* allow absolute positioning of the toggle and dropdown */
-      }
-
-      .nav-toggle {
-        display: block;
-        position: absolute;
-        right: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .nav-brand {
-        margin-right: 3.5rem;
-        /* give space so brand doesn't collide with absolute toggle */
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: calc(100% + 0.5rem);
-        left: 1rem;
-        right: 1rem;
-        background: rgba(255, 255, 255, 0.96);
-        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(206, 240, 249, 0.4));
-        border: 1px solid rgba(14, 214, 189, 0.35);
-        border-radius: 18px;
-        box-shadow: 0 14px 30px rgba(14, 214, 189, 0.18);
-        padding: 0.85rem;
-        flex-direction: column;
-        gap: 0.5rem;
-        z-index: 150;
-        box-sizing: border-box;
-        max-width: calc(100% - 2rem);
-        max-height: calc(100vh - 110px);
-        overflow-y: auto;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links a {
-        font-size: 0.95rem;
-        padding: 10px 14px;
-        background: rgba(14, 214, 189, 0.12);
-        border-radius: 999px;
-        color: var(--mid);
-        width: 100%;
-      }
-
-      .nav-links a {
-        font-size: 0.95rem;
-        padding: 10px 14px;
-      }
-    }
-
-    header {
-      text-align: center;
-      padding: 3.5rem 1.5rem 2rem;
-    }
-
-    .cross-icon {
-      font-size: 2.6rem;
-      display: block;
-      margin-bottom: 0.5rem;
-      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
-    }
-
-    header h1 {
-      font-family: var(--font-heading);
-      font-size: clamp(1.8rem, 5vw, 3.2rem);
-      color: var(--dark);
-      line-height: 1.2;
-      text-shadow: 0 2px 8px rgba(255, 255, 255, 0.7);
-    }
-
-    header p.subtitle {
-      margin-top: 0.6rem;
-      font-size: 1.05rem;
-      color: var(--mid);
-      font-weight: 300;
-      letter-spacing: 0.06em;
-    }
-
-    main {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 1.2rem 4rem;
-    }
-
-    .section-divider {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 2.5rem 0 1.5rem;
-    }
-
-    .section-divider h2 {
-      font-family: var(--font-heading);
-      font-size: 1.35rem;
-      color: var(--mid);
-      white-space: nowrap;
-    }
-
-    .section-divider::after {
-      content: '';
-      flex: 1;
-      height: 2px;
-      background: linear-gradient(to right, var(--teal), transparent);
-      border-radius: 99px;
-    }
-
-    .song-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1.5px solid rgba(14, 214, 189, 0.22);
-      margin-bottom: 2.5rem;
-      overflow: hidden;
-      animation: fadeUp 0.5s ease both;
-    }
-
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .song-header {
-      background: linear-gradient(90deg, var(--teal) 0%, var(--sky) 100%);
-      padding: 1rem 1.4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .song-number {
-      background: rgba(255, 255, 255, 0.5);
-      border-radius: 50%;
-      width: 34px;
-      height: 34px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: var(--dark);
-      flex-shrink: 0;
-    }
-
-    .song-title {
-      font-family: var(--font-heading);
-      font-size: 1.15rem;
-      color: var(--dark);
-    }
-
-    .song-role {
-      margin-left: auto;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      background: rgba(255, 255, 255, 0.55);
-      padding: 3px 10px;
-      border-radius: 30px;
-      color: var(--mid);
-      white-space: nowrap;
-    }
-
-    .song-body {
-      padding: 1.4rem;
-    }
-
-    .yt-embed {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      border-radius: 12px;
-      overflow: hidden;
-      background: var(--dark);
-      margin-bottom: 1.2rem;
-    }
-
-    .yt-embed iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    /* Thumbnail link style (no dedicated video) */
-    .yt-embed .yt-thumb {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-    }
-
-    .yt-embed .yt-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .yt-embed .yt-thumb::after {
-      content: '▶';
-      position: absolute;
-      font-size: 3rem;
-      color: white;
-      background: rgba(0, 0, 0, 0.55);
-      border-radius: 50%;
-      width: 64px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-left: 6px;
-    }
-
-    /* "No video" placeholder */
-    .yt-no-video {
-      width: 100%;
-      border-radius: 12px;
-      background: rgba(14, 214, 189, 0.08);
-      border: 2px dashed rgba(14, 214, 189, 0.4);
-      padding: 2rem 1rem;
-      text-align: center;
-      color: var(--mid);
-      font-size: 0.88rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .yt-no-video span {
-      font-size: 2rem;
-      display: block;
-      margin-bottom: 0.4rem;
-    }
-
-    .label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      margin-bottom: 0.4rem;
-    }
-
-    .audio-section {
-      margin-bottom: 1.2rem;
-    }
-
-    .audio-placeholder {
-      background: linear-gradient(90deg, rgba(14, 214, 189, 0.08), rgba(206, 240, 249, 0.3));
-      border: 2px dashed rgba(14, 214, 189, 0.5);
-      border-radius: 12px;
-      padding: 1rem 1.2rem;
-      text-align: center;
-      color: var(--mid);
-      font-size: 0.88rem;
-    }
-
-    .audio-placeholder .upload-icon {
-      font-size: 1.6rem;
-      display: block;
-    }
-
-    .audio-placeholder code {
-      background: rgba(14, 214, 189, 0.15);
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 0.82rem;
-      font-family: monospace;
-    }
-
-    audio {
-      width: 100%;
-      border-radius: 8px;
-      accent-color: var(--teal);
-    }
-
-    .lyrics-toggle {
-      background: var(--teal);
-      color: var(--white);
-      border: none;
-      border-radius: 30px;
-      padding: 8px 20px;
-      font-family: var(--font-body);
-      font-size: 0.85rem;
-      font-weight: 700;
-      cursor: pointer;
-      letter-spacing: 0.05em;
-      transition: background 0.2s, transform 0.1s;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .lyrics-toggle:hover {
-      background: var(--accent);
-    }
-
-    .lyrics-toggle:active {
-      transform: scale(0.97);
-    }
-
-    .lyrics-box {
-      display: none;
-      margin-top: 0.9rem;
-      background: linear-gradient(135deg, rgba(245, 246, 93, 0.08), rgba(206, 240, 249, 0.25));
-      border-left: 4px solid var(--teal);
-      border-radius: 0 12px 12px 0;
-      padding: 1rem 1.2rem;
-    }
-
-    .lyrics-box.open {
-      display: block;
-    }
-
-    .lyrics-box pre {
-      white-space: pre-wrap;
-      word-break: break-word;
-      font-family: var(--font-body);
-      font-size: 0.92rem;
-      line-height: 1.9;
-      color: var(--dark);
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.82rem;
-      color: var(--mid);
-      opacity: 0.8;
-    }
-
-    .back-top {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: var(--teal);
-      color: var(--white);
-      border: none;
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      font-size: 1.3rem;
-      cursor: pointer;
-      box-shadow: 0 4px 16px rgba(14, 214, 189, 0.4);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 200;
-      transition: background 0.2s;
-    }
-
-    .back-top:hover {
-      background: var(--accent);
-    }
-
-    .back-top.visible {
-      display: flex;
-    }
+    /* Additional internal css styles for this specific page can be added here */
   </style>
 </head>
 
@@ -520,8 +34,9 @@
       <li><a href="#song-9">9. Lord's Prayer</a></li>
       <li><a href="#song-10">10. Doxology</a></li>
       <li><a href="#song-11">11. Agnus Dei</a></li>
-      <li><a href="#song-12">12. Communion</a></li>
-      <li><a href="#song-13">13. Recessional</a></li>
+      <li><a href="#song-12">12. Communion 1</a></li>
+      <li><a href="#song-13">13. Communion 2</a></li>
+      <li><a href="#song-14">14. Recessional</a></li>
     </ul>
   </nav>
 
@@ -636,21 +151,21 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-          <div class="audio-section">
-            <p class="label">🎵 Instrumental Practice Audio</p>
-            <audio controls src="audio/[3] Celtic Alleluia - (Piano Instrumental, Chords).mp3"></audio>
-          </div>
-          <div class="lyrics-section">
-            <p class="label">📜 Lyrics</p>
-            <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
-              <span>▼</span> Show Lyrics
-            </button>
-            <div class="lyrics-box">
-              <pre>Alleluia, alleluia,
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <audio controls src="audio/[3] Celtic Alleluia - (Piano Instrumental, Chords).mp3"></audio>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>Alleluia, alleluia,
 alleluia, alleluia!</pre>
-            </div>
           </div>
         </div>
+      </div>
     </article>
 
     <!-- ════════ SONG 4 – MARIAN SONG ════════ -->
@@ -670,7 +185,7 @@ alleluia, alleluia!</pre>
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
         </div>
         <div class="audio-section">
-          <p class="label">🎵 Instrumental Practice Audio</p>
+          <p class="label">🎵 Practice Audio</p>
           <audio controls
             src="audio/[4] On This Day, O Beautiful Mother  SATB Choir w Lyrics Mary, Mother of God  Sunday 7pm Choir.mp3"></audio>
         </div>
@@ -680,8 +195,7 @@ alleluia, alleluia!</pre>
             <span>▼</span> Show Lyrics
           </button>
           <div class="lyrics-box">
-            <pre>
-On this day, O beautiful Mother,
+            <pre>On this day, O beautiful Mother,
 On this day we give thee our love.
 Near the, Madonna, fondly we hover,
 Trusting thy gentle care to prove.
@@ -887,7 +401,7 @@ Dito sa lupa para nang sa langit.
 
 Bigyan Mo po kami
 Ngayon ng aming kakanin sa araw-araw;
-At patawarin Mo ang aming mga sala
+At patawarin Mo kami sa ang aming mga sala
 Para nang pagpapatawad naming
 Sa nagkakasala sa amin.
 At huwag Mo po kaming ipahintulot sa tukso,
@@ -972,12 +486,67 @@ Ipagkaloob Mo sa amin, ang kapayapa-an!</pre>
       </div>
     </article>
 
-    <!-- ════════ SONG 12 – COMMUNION ════════ -->
+    <!-- ════════ SONG 12 – COMMUNION 1 ════════ -->
     <article class="song-card" id="song-12" style="animation-delay:0.60s">
       <div class="song-header">
         <span class="song-number">12</span>
+        <span class="song-title">Sapagkat and Diyos ay Pag-ibig</span>
+        <span class="song-role">Communion 1</span>
+      </div>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-embed">
+          <!-- YouTube video ID: yqZjG_nRBe0 -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/yqZjG_nRBe0?si=eY8r9Q3CLlF7UWFj"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <audio controls src="audio/[11] Diyos ay Pag-ibig (Piano, Chords, Lyrics).mp3"></audio>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>Pag-ibig ang siyang pumukaw
+Sa ating puso't kaluluwa
+At siyang nagdulot sa ating buhay
+Liwanag sa dilim at pag-asa
+Pag-ibig ang siyang buklod natin
+Di mapapawi kailan pa man
+Sa puso't diwa tayo'y isa lamang
+Kahit na tayo'y magkawalay
+Pagka't ang Diyos natin Diyos ng pag-ibig
+Magmahalan tayo't magtulungan
+At kung tayo'y bigo ay h'wag limutin
+Na may Diyos tayong nagmamahal
+Sikapin sa ating pagtungo
+Ipamalita sa buong mundo
+Pag-ibig ng Diyos na siyang sumakop sa
+Bawa't pusong uhaw sa pagsuyo
+Pagka't ang Diyos natin Diyos ng pag-ibig
+Magmahalan tayo't magtulungan
+At kung tayo'y bigo ay h'wag limutin
+Na may Diyos tayong nagmamahal oh
+Pagka't ang Diyos natin Diyos ng pag-ibig
+Magmahalan tayo't magtulungan
+At kung tayo'y bigo ay h'wag limutin
+Na may Diyos tayong nagmamahal</pre>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ════════ SONG 13 – COMMUNION 2 ════════ -->
+    <article class="song-card" id="song-13" style="animation-delay:0.65s">
+      <div class="song-header">
+        <span class="song-number">13</span>
         <span class="song-title">Tinapay ng Buhay</span>
-        <span class="song-role">Communion</span>
+        <span class="song-role">Communion 2</span>
       </div>
       <div class="song-body">
         <p class="label">📺 Tutorial Video</p>
@@ -989,7 +558,7 @@ Ipagkaloob Mo sa amin, ang kapayapa-an!</pre>
         </div>
         <div class="audio-section">
           <p class="label">🎵 Instrumental Practice Audio</p>
-          <audio controls src="audio/[11] Tinapay ng Buhay.mp3"></audio>
+          <audio controls src="audio/[12] Tinapay ng Buhay.mp3"></audio>
         </div>
         <div class="lyrics-section">
           <p class="label">📜 Lyrics</p>
@@ -1028,10 +597,10 @@ At pagsasalong walang-hanggan</pre>
       </div>
     </article>
 
-    <!-- ════════ SONG 13 – RECESSIONAL ════════ -->
-    <article class="song-card" id="song-13" style="animation-delay:0.65s">
+    <!-- ════════ SONG 14 – RECESSIONAL ════════ -->
+    <article class="song-card" id="song-14" style="animation-delay:0.70s">
       <div class="song-header">
-        <span class="song-number">13</span>
+        <span class="song-number">14</span>
         <span class="song-title">Magpasalamat Kayo sa Panginoon</span>
         <span class="song-role">Recessional</span>
       </div>
@@ -1047,7 +616,7 @@ At pagsasalong walang-hanggan</pre>
         <div class="audio-section">
           <p class="label">🎵 Instrumental Practice Audio</p>
           <audio controls
-            src="audio/[12] Magpasalamat kayo sa Panginoon - Recessional song Instrumental with Lyrics.mp3"></audio>
+            src="audio/[13] Magpasalamat kayo sa Panginoon - Recessional song Instrumental with Lyrics.mp3"></audio>
         </div>
         <div class="lyrics-section">
           <p class="label">📜 Lyrics</p>
@@ -1055,8 +624,7 @@ At pagsasalong walang-hanggan</pre>
             <span>▼</span> Show Lyrics
           </button>
           <div class="lyrics-box">
-            <pre>
-[Verse 1]
+            <pre>[Verse 1]
 Magpasalamat kayo sa Panginoon
 Na S'yang lumikha ng lahat ng bagay dito sa mundo
 Siya’y gumawa ng buwan at mga bituin
@@ -1091,37 +659,7 @@ O, magpasalamat sa Kanyang mga biyaya at awa</pre>
 
   <button class="back-top" id="backTop" title="Back to top" aria-label="Back to top">↑</button>
 
-  <script>
-    /* ─── Hamburger menu ─── */
-    document.getElementById('navToggle').addEventListener('click', function () {
-      const links = document.getElementById('navLinks');
-      links.classList.toggle('open');
-      this.textContent = links.classList.contains('open') ? '✕' : '☰';
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(a => {
-      a.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('open');
-        document.getElementById('navToggle').textContent = '☰';
-      });
-    });
-
-    /* ─── Lyrics toggle ─── */
-    function toggleLyrics(btn) {
-      const box = btn.nextElementSibling;
-      const isOpen = box.classList.toggle('open');
-      btn.setAttribute('aria-expanded', isOpen);
-      btn.querySelector('span').textContent = isOpen ? '▲' : '▼';
-      btn.lastChild.textContent = isOpen ? ' Hide Lyrics' : ' Show Lyrics';
-    }
-
-    /* ─── Back to top button ─── */
-    const backTop = document.getElementById('backTop');
-    window.addEventListener('scroll', () => {
-      backTop.classList.toggle('visible', window.scrollY > 400);
-    });
-    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  </script>
+  <script src="app.js"></script>
 
   <!-- 
 Template for adding new songs:
