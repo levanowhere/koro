@@ -82,6 +82,7 @@
       font-size: 1.2rem;
       color: var(--mid);
     }
+
     /* Keep the toggle aligned to the right grid cell and size to its content */
     .nav-toggle {
       justify-self: end;
@@ -117,12 +118,14 @@
     }
 
     @media (max-width: 700px) {
+
       /* Use a simple flex layout on small screens so brand stays left and toggle remains compact on the right */
       nav {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        position: relative; /* allow absolute positioning of the toggle and dropdown */
+        position: relative;
+        /* allow absolute positioning of the toggle and dropdown */
       }
 
       .nav-toggle {
@@ -134,7 +137,8 @@
       }
 
       .nav-brand {
-        margin-right: 3.5rem; /* give space so brand doesn't collide with absolute toggle */
+        margin-right: 3.5rem;
+        /* give space so brand doesn't collide with absolute toggle */
       }
 
       .nav-links {
@@ -620,32 +624,32 @@
     <article class="song-card" id="song-3" style="animation-delay:0.15s">
       <div class="song-header">
         <span class="song-number">3</span>
-        <span class="song-title">Celtic Alleluia</span>
+        <span class="song-title">Alleluia</span>
         <span class="song-role">Gospel Acc.</span>
       </div>
       <div class="song-body">
         <p class="label">📺 Tutorial Video</p>
         <div class="yt-embed">
-          <!-- YouTube video ID: 4B0nxsYk1N4 -->
-          <iframe src="https://www.youtube.com/embed/4B0nxsYk1N4?si=bbX3cNcaG1pXzAUK" title="Celtic Alleluia Tutorial"
+          <!-- YouTube video ID: R2VvyJWoo5o -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/R2VvyJWoo5o?si=YHeLkr1Auv2Ps_zC"
+            title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="audio-section">
-          <p class="label">🎵 Instrumental Practice Audio</p>
-          <audio controls src="audio/[3] Celtic Alleluia - (Piano Instrumental, Chords).mp3"></audio>
-        </div>
-        <div class="lyrics-section">
-          <p class="label">📜 Lyrics</p>
-          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
-            <span>▼</span> Show Lyrics
-          </button>
-          <div class="lyrics-box">
-            <pre>Alleluia, alleluia,
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="audio-section">
+            <p class="label">🎵 Instrumental Practice Audio</p>
+            <audio controls src="audio/[3] Celtic Alleluia - (Piano Instrumental, Chords).mp3"></audio>
+          </div>
+          <div class="lyrics-section">
+            <p class="label">📜 Lyrics</p>
+            <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+              <span>▼</span> Show Lyrics
+            </button>
+            <div class="lyrics-box">
+              <pre>Alleluia, alleluia,
 alleluia, alleluia!</pre>
+            </div>
           </div>
         </div>
-      </div>
     </article>
 
     <!-- ════════ SONG 4 – MARIAN SONG ════════ -->
@@ -1118,6 +1122,41 @@ O, magpasalamat sa Kanyang mga biyaya at awa</pre>
     backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 
+  <!-- 
+Template for adding new songs:
+    <article class="song-card" id="song-#" style="animation-delay:0.10s">
+      <div class="song-header">
+        <span class="song-number">#</span>
+        <span class="song-title">Category</span>
+        <span class="song-role">Category</span>
+      </div>
+      <div class="song-body">
+        <p class="label">📺 Tutorial Video</p>
+        <div class="yt-no-video">
+          <span>🎬</span>
+          No tutorial video yet. Add a YouTube video ID here when available.
+        </div>
+        <div class="audio-section">
+          <p class="label">🎵 Instrumental Practice Audio</p>
+          <div class="audio-placeholder">
+            <span class="upload-icon">🎼</span>
+            Add instrumental file: put it in the <code>audio/</code> folder,<br>
+            then replace this block with:<br>
+            <code>&lt;audio controls src="audio/song.mp3"&gt;&lt;/audio&gt;</code>
+          </div>
+        </div>
+        <div class="lyrics-section">
+          <p class="label">📜 Lyrics</p>
+          <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
+            <span>▼</span> Show Lyrics
+          </button>
+          <div class="lyrics-box">
+            <pre>[No available lyrics yet]</pre>
+          </div>
+        </div>
+      </div>
+    </article>
+-->
 </body>
 
 </html>
