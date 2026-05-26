@@ -82,12 +82,39 @@ nav {
 
 .nav-links {
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
   gap: 0.25rem;
   list-style: none;
-  /* Ensure links wrap inside the right-hand column rather than under the brand */
   width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.nav-links li {
+  flex: 0 0 auto;
+}
+
+.nav-links::-webkit-scrollbar {
+  height: 7px;
+}
+
+.nav-links::-webkit-scrollbar-track {
+  background: rgba(14, 214, 189, 0.12);
+  border-radius: 999px;
+}
+
+.nav-links::-webkit-scrollbar-thumb {
+  background: rgba(10, 175, 160, 0.85);
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+.nav-links {
+  scrollbar-color: rgba(10, 175, 160, 0.85) rgba(14, 214, 189, 0.12);
+  scrollbar-width: thin;
 }
 
 .nav-links a {
