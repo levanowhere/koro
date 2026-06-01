@@ -13,8 +13,24 @@ your-repo/
 │   ├── entrance-song.mp3
 │   ├── kyrie.mp3
 │   └── ...
-└── README.md           ← This file
+├── README.md           ← This file
+├── CONTRIBUTING.md     ← How to contribute and reuse this repo
+├── LICENSE             ← MIT open source license
+├── CODEOWNERS          ← GitHub review ownership settings
+├── CHANGELOG.md        ← Release notes and history
 ```
+
+---
+
+## 📚 Using this repo as a reference
+
+This repository is a simple website template you can copy and adapt for your own choir practice or church music ministry.
+
+- Fork or clone this repo to start your own project.
+- Rename the repo to match your choir, parish, or event.
+- Update `index.html` with your own song titles, dates, lyrics, and audio files.
+- Replace the placeholder GitHub username in `CODEOWNERS` if you want review ownership.
+- Keep the GitHub Pages setup steps below as your deployment guide.
 
 ---
 
@@ -199,4 +215,4 @@ If you edit locally on your computer:
 
 ---
 
-*Made with love for the Filipino Mass Community ✝*
+*Made for the Filipino Mass Community ✝*
