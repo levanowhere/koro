@@ -49,7 +49,7 @@
       ╚══════════════════════════════╝
     -->
     <h1>Filipino Mass</h1>
-    <p class="subtitle">30 August 2026 &nbsp;·&nbsp; Song Practice Guide<br>
+    <p class="subtitle">29 November 2026 &nbsp;·&nbsp; Song Practice Guide<br>
       <em>(Occasionally Updating)</em>
     </p>
 
@@ -62,10 +62,10 @@
         3. Optionally change the  download=""  attribute to rename
            the file the user receives when they click the button.
     -->
-    <a class="btn-download" href="">
+    <a class="btn-download" href="" target="_blank" rel="noopener">
       &#128196; Download Lyrics Sheet (.docx)
     </a>
-    <a class="btn-download" href="">
+    <a class="btn-download" href="" target="_blank" rel="noopener">
       &#128196; Download Lyrics Sheet (.pdf)
     </a>
   </header>
@@ -75,7 +75,8 @@
       <h2>Song Lineup</h2>
     </div>
     <div style="font-family: var(--font-heading);">
-      <p>Below are the tutorial videos, practice audios, and lyrics for each song in the Filipino Mass on 30 August
+      <p>Below are the tutorial videos, practice audios, lyrics, and chords for each song in the Filipino Mass on 29
+        November
         2026.
         The songs are listed in the order they will be performed during the mass.</p>
       <br>
@@ -83,7 +84,9 @@
         take
         you to the video. If further assistance is needed, you may seek assitance in our group chat.</p>
       <br>
-      <p>Some hymns may not have their instrumental audio available.</p>
+      <p>Some hymns may not have their instrumental audio or chords available.</p>
+      <br>
+      <p>You are welcome to contribute your knowledge by harmonising according to your vocal classification, provided you are familiar with the harmony parts.</p>
       <br><br>
     </div>
 
@@ -91,24 +94,29 @@
     <article class="song-card" id="song-1" style="animation-delay:0.10s">
       <div class="song-header">
         <span class="song-number">1</span>
-        <span class="song-title">Halina't Magsilapit</span>
+        <span class="song-title">N/A</span>
         <span class="song-role">Entrance</span>
       </div>
       <div class="song-body">
         <p class="label">📺 Tutorial Video</p>
-        <div class="yt-embed">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/-DA76ay7idk?si=GASQ_R1-JMEp-lDs"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="yt-no-video">
+          <span>🎬</span>
+          No tutorial video yet. YouTube video ID added here when available.
         </div>
         <div class="audio-section">
           <p class="label">🎵 Instrumental Practice Audio</p>
           <div class="audio-placeholder">
             <span class="upload-icon">🎼</span>
-            Instrumental file added here in the <code>audio/</code> folder,<br>
-            then block replaced with:<br>
-            <code>&lt;audio controls src="audio/song.mp3"&gt;&lt;/audio&gt;</code>
+            Instrumental audio is not available for this song.
+          </div>
+        </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box">
+            <pre>None</pre>
           </div>
         </div>
         <div class="lyrics-section">
@@ -117,24 +125,7 @@
             <span>▼</span> Show Lyrics
           </button>
           <div class="lyrics-box">
-            <pre>KORO:
- D                        A           D 
-Halina’t magsilapit sa Diyos ng pag-ibig,
-                           A               D 
-At sa kanya ay sumamba sa Diyos na ating Ama.
-
-  G - A    D      A         D 
-Gawai’y iwanan at ating samahan,
-    G - A      D     E              A - A7 
-Ang Diyos ng buhay, Diyos na ating gabay.
-(ulitin Koro)
-
-  G   A     D     A       D 
-Poon ang nagsabi alita’y iwaksi,
-  G - A   D       E          A - A7 
-Batiin kaaway at tayo’y mag-alay.
-
-(ulitin KORO)</pre>
+            <pre>None</pre>
           </div>
         </div>
       </div>
@@ -157,7 +148,22 @@ Batiin kaaway at tayo’y mag-alay.
         </div>
         <div class="audio-section">
           <p class="label">🎵 Instrumental Practice Audio</p>
-          <audio controls src="audio/[2] Papuri sa Diyos (Hontiveros)  Piano, Chords, Notes, Lyrics.mp3"></audio>
+          <div class="audio-placeholder">
+            <span class="upload-icon">🎼</span>
+            Instrumental audio is not available for this song.
+          </div>
+        </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box chords-download-box">
+            <a class="btn-download chords-download"
+              href="chords/pdfcoffee.com_papuri-sa-diyos-by-bukas-palad-pdf-free.pdf" target="_blank" rel="noopener">
+              &#128196; Chords Sheet (.pdf)
+            </a>
+          </div>
         </div>
         <div class="lyrics-section">
           <p class="label">📜 Lyrics</p>
@@ -268,6 +274,17 @@ Papuri sa Diyos sa kaitaasan</pre>
           <p class="label">🎵 Instrumental Practice Audio</p>
           <audio controls src="audio/[3] Celtic Alleluia - (Piano Instrumental, Chords).mp3"></audio>
         </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box">
+            <a href="https://youtu.be/WwKKV__GiBc?si=CdOSKh1q6ZPTJ1BQ" target="_blank" rel="noopener">
+              Open chords video on YouTube
+            </a>
+          </div>
+        </div>
         <div class="lyrics-section">
           <p class="label">📜 Lyrics</p>
           <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
@@ -285,13 +302,13 @@ alleluia, alleluia!</pre>
     <article class="song-card" id="song-4" style="animation-delay:0.20s">
       <div class="song-header">
         <span class="song-number">4</span>
-        <span class="song-title">Paghahandog</span>
+        <span class="song-title">Mula Sa'Yo</span>
         <span class="song-role">Offertory</span>
       </div>
       <div class="song-body">
         <p class="label">📺 Tutorial Video</p>
         <div class="yt-embed">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/AJKHC6KlWOQ?si=WQ5WxzxM5SR3zgkf"
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/olxPbuD3e8I?si=tkrBeoALo97Y4KbF"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -300,9 +317,54 @@ alleluia, alleluia!</pre>
           <p class="label">🎵 Instrumental Practice Audio</p>
           <div class="audio-placeholder">
             <span class="upload-icon">🎼</span>
-            Instrumental file added here in the <code>audio/</code> folder,<br>
-            then block replaced with:<br>
-            <code>&lt;audio controls src="audio/song.mp3"&gt;&lt;/audio&gt;</code>
+            Instrumental audio is not available for this song.
+          </div>
+        </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box">
+            <pre>Intro: D - G/D - D - G/D
+
+
+      D      G/D           D         G/D A/D D
+KORO1: Wala akong maihahandog sa 'Yo,
+
+              G/D           F#4 - F#7  Bm7-Bm/A    GM7
+       Na 'di mula sa kabuti- - - -han Mo.
+
+              F#m7 D/F# GM7            F#m7 D/F# BbM7
+       Gayunpaman,         'Yong tanggapin,
+
+              Am7        G/A - A7 - G/A - A7 - FM7
+       Aking alay, pabanalin.
+
+
+                C/E  FM7             C/E   AbM7
+1. Muli kong handog,   buhay Mong kaloob;
+
+           Eb/G        F/G - G7 - G/A - A7
+   Kalugdan Mo at basbasan. (KORO1)
+
+
+2. Mula sa Iyo, lahat ng ito;
+   Buhay ko'y paghaharian Mo.
+   
+
+      D      G/D           D         G/D A/D D
+KORO2: Wala akong maihahandog sa 'Yo,
+
+                G/D         F#4 Bm7  GM7
+       Na 'di mula sa kabutihan Mo.
+
+              F#m7 D/F# GM7            F#m7 D/F# Em
+       Gayunpaman,         'Yong tanggapin,
+
+               D CM7      A4  A7           D9 - G/D - D9
+       Aking alay, pabanalin,   tanging hiling.
+</pre>
           </div>
         </div>
         <div class="lyrics-section">
@@ -311,23 +373,21 @@ alleluia, alleluia!</pre>
             <span>▼</span> Show Lyrics
           </button>
           <div class="lyrics-box">
-            <pre>Ang himig Mo, ang awit ko
-Lahat ng ito’y nagmula sa Iyo
-Muling ihahandog sa ‘Yo
-Buong puso kong inaalay sa ‘Yo
+            <pre>Wala akong maihahandog sa'Yo,
+Na 'di mula sa kabutihan mo.
+Gayon pa man, 'Yong tanggapin,
+Aking alay, pabanalin.
 
-Koro:
-O D’yos, O Panginoon
-Lahat ay biyayang aming inampon
-Aming buhay at kakayahan
-Ito’y para lamang sa ’yong kalwalhatian
-Ang tanging ninanais ko
-Ay matamo lamang ang pag-ibig Mo
-Lahat ay iiwanan ko
-Wala nang kailangan
-Sapat na ito
+Muli kong handog, buhay Mong kaloob;
+Kalugdan Mo at basbasan.
 
-(Koro)</pre>
+Mula sa iyo, ang lahat ng ito;
+Buhay ko’y pagharian Mo.
+
+Wala akong maihahandog sa ‘yo
+Na di mula sa kabutihan mo
+Gayon pa man, ‘Yong tanggapin,
+Aking alay, pabanalin, tanging hiling.</pre>
           </div>
         </div>
       </div>
@@ -351,6 +411,22 @@ Sapat na ito
         <div class="audio-section">
           <p class="label">🎵 Instrumental Practice Audio</p>
           <audio controls src="audio/[6] SANTO - Tinapay ng Buhay Vol 1.mp3"></audio>
+        </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box">
+            <pre>Guitar:</pre>
+            <a href="https://youtu.be/4LH-7doUxCk?si=uCiZdyUbKPjpcZ48" target="_blank" rel="noopener">
+              Open chords video on YouTube
+            </a>
+            <pre>Piano:</pre>
+            <a href="https://youtu.be/IMcngrTQ8Hk?si=ZQRpquuufiulopdu" target="_blank" rel="noopener">
+              Open chords video on YouTube
+            </a>
+          </div>
         </div>
         <div class="lyrics-section">
           <p class="label">📜 Lyrics</p>
@@ -392,6 +468,22 @@ Hosanna Hosanna Hosanna sa Kaitaasan!</pre>
           <p class="label">🎵 Instrumental Practice Audio</p>
           <audio controls src="audio/[7] Sa Krus Mo (Tinapay ng Buhay) piano.mp3"></audio>
         </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box">
+            <pre>Guitar:</pre>
+            <a href="https://youtu.be/4LH-7doUxCk?si=H2C3V9-dnwNrEmUy&t=88" target="_blank" rel="noopener">
+              Open chords video on YouTube
+            </a>
+            <pre>Piano:</pre>
+            <a href="https://youtu.be/IMcngrTQ8Hk?si=KPQnmllJBlph6UUC&t=667" target="_blank" rel="noopener">
+              Open chords video on YouTube
+            </a>
+          </div>
+        </div>
         <div class="lyrics-section">
           <p class="label">📜 Lyrics</p>
           <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
@@ -428,6 +520,17 @@ Ngayon at magpa-kailanman.</pre>
           <p class="label">🎵 Instrumental Practice Audio</p>
           <audio controls src="audio/[8] Amen.mp3"></audio>
         </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box">
+            <a href="https://youtu.be/wVLjKOsymJ4?si=3xe9QydvNfCWbQRd" target="_blank" rel="noopener">
+              Open chords video on YouTube
+            </a>
+          </div>
+        </div>
         <div class="lyrics-section">
           <p class="label">📜 Lyrics</p>
           <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
@@ -459,6 +562,17 @@ A-men, A-men, A - - - men!</pre>
         <div class="audio-section">
           <p class="label">🎵 Instrumental Practice Audio</p>
           <audio controls src="audio/[9] Ama Namin (Manoling Francisco)  Piano, Chords, Notes, Lyrics.mp3"></audio>
+        </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box">
+            <a href="https://youtu.be/wVLjKOsymJ4?si=3xe9QydvNfCWbQRd" target="_blank" rel="noopener">
+              Open chords video on YouTube
+            </a>
+          </div>
         </div>
         <div class="lyrics-section">
           <p class="label">📜 Lyrics</p>
@@ -503,6 +617,17 @@ At i-adya Mo kami sa lahat ng masama.</pre>
           <p class="label">🎵 Instrumental Practice Audio</p>
           <audio controls src="audio/[10] Sapagkat Sa'yo ang Kaharian.mp3"></audio>
         </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box">
+            <a href="https://youtu.be/lnHEvMuZuU0?si=Ma8o8HZu39VfdPrH&t=124" target="_blank" rel="noopener">
+              Open chords video on YouTube
+            </a>
+          </div>
+        </div>
         <div class="lyrics-section">
           <p class="label">📜 Lyrics</p>
           <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
@@ -537,23 +662,28 @@ Ngayon at Magpakailanman</pre>
           <p class="label">🎵 Instrumental Practice Audio</p>
           <audio controls src="audio/[11] Kordero ng Diyos.mp3"></audio>
         </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box">
+            <a href="https://youtu.be/lyFqL-0mZuU?si=aBF1KNJMpGtM6b06" target="_blank" rel="noopener">
+              Open chords video on YouTube
+            </a>
+          </div>
+        </div>
         <div class="lyrics-section">
           <p class="label">📜 Lyrics</p>
           <button class="lyrics-toggle" onclick="toggleLyrics(this)" aria-expanded="false">
             <span>▼</span> Show Lyrics
           </button>
           <div class="lyrics-box">
-            <pre>Kordero ng Diyos na nag-aalis
-Ng mga kasalanan ng Sanlibutan,
-Maawa Ka sa amin! Maawa Ka sa amin.
+            <pre>Kordero ng Diyos na nag-aalis ng mga kasalanan ng mundo
+Maawa Ka sa amin! Kordero ng Diyos, maawa Ka. (2x)
 
-Kordero ng Diyos na nag-aalis
-Ng mga kasalanan ng Sanlibutan,
-Maawa Ka sa amin! Maawa Ka sa amin.
-
-Kordero ng Diyos na nag-aalis
-Ng mga kasalanan ng Sanlibutan,
-Ipagkaloob Mo sa amin, ang kapayapa-an!</pre>
+Kordero ng Diyos na nag-aalis ng mga kasalanan ng mundo
+Ipagkaloob Mo sa amin ang kapayapaan</pre>
           </div>
         </div>
       </div>
@@ -563,14 +693,14 @@ Ipagkaloob Mo sa amin, ang kapayapa-an!</pre>
     <article class="song-card" id="song-11" style="animation-delay:0.55s">
       <div class="song-header">
         <span class="song-number">11</span>
-        <span class="song-title">Narito Ako</span>
+        <span class="song-title">Awit ng Paghilom</span>
         <span class="song-role">Communion 1</span>
       </div>
       <div class="song-body">
         <p class="label">📺 Tutorial Video</p>
         <div class="yt-embed">
-          <!-- YouTube video ID: C79EKm2tU74 -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/C79EKm2tU74?si=3vdTxwjV_V37gaWY"
+          <!-- YouTube video ID: oY7Y5OEOvP4 -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/oY7Y5OEOvP4?si=jwjSKxTMLnYOlPvt"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -579,9 +709,19 @@ Ipagkaloob Mo sa amin, ang kapayapa-an!</pre>
           <p class="label">🎵 Instrumental Practice Audio</p>
           <div class="audio-placeholder">
             <span class="upload-icon">🎼</span>
-            Instrumental file added here in the <code>audio/</code> folder,<br>
-            then block replaced with:<br>
-            <code>&lt;audio controls src="audio/song.mp3"&gt;&lt;/audio&gt;</code>
+            Instrumental audio is not available for this song.
+          </div>
+        </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box chords-download-box">
+            <a class="btn-download chords-download" href="chords/awit ng paghilom chords.pdf" target="_blank"
+              rel="noopener">
+              &#128196; Chords Sheet (.pdf)
+            </a>
           </div>
         </div>
         <div class="lyrics-section">
@@ -590,25 +730,41 @@ Ipagkaloob Mo sa amin, ang kapayapa-an!</pre>
             <span>▼</span> Show Lyrics
           </button>
           <div class="lyrics-box">
-            <pre>Koro:
-Panginoon, narito ako
-Naghihintay sa utos Mo
-Lahat ng yaman ko, ay alay ko sa ‘Yo
-Ikaw ang tanging buhay ko
+            <pre>[Chorus]
+Panginoon ko, hanap-hanap Ka ng puso
+Tinig Mo'y isang awit paghilom
+Panginoon ko, hanap-hanap Ka ng puso
+Tinig Mo'y isang awit paghilom
 
-Batid ko nga, at natanto
-Sa kasulatan ‘Yong turo
-Pakikinggan, at itatago
-Sa sulok ng puso
+[Verse 1]
+Ang baling ng aking diwa ay sa 'Yo
+H'wag nawang pababayaang masiphayo
+Ikaw ang buntong hininga ng buhay
+Dulot Mo'y kapayapaan, pag-ibig
 
-(Koro)
+[Chorus]
+Panginoon ko, hanap-hanap Ka ng puso
+Tinig Mo'y isang awit paghilom
 
-‘Yong pagligtas, ihahayag
-Hanggang sa dulo ng dagat
-Pagtulong Mo’t pusong dalisay
-Aking ikakalat
+[Verse 2]
+Ako'y akayin sa daang matuwid
+H'wag nawang pahintulutang mabighani
+Sa panandalian at huwad na rilag
+Ikaw ang aking tanging Tagapagligtas
 
-(Koro)</pre>
+[Chorus]
+Panginoon ko, hanap-hanap Ka ng puso
+Tinig Mo'y isang awit paghilom
+
+[Verse 3]
+Sigwa sa'king kalooban 'Yong masdan
+Pahupain ang bugso ng kalungkutan
+Yakapin ng buong higpit 'Yong anak
+Nang mayakap din ang bayan Mong ibig
+
+[Chorus]
+Panginoon ko, hanap-hanap Ka ng puso
+Tinig Mo'y isang awit paghilom</pre>
           </div>
         </div>
       </div>
@@ -618,25 +774,29 @@ Aking ikakalat
     <article class="song-card" id="song-12" style="animation-delay:0.60s">
       <div class="song-header">
         <span class="song-number">12</span>
-        <span class="song-title">Narito Ako</span>
+        <span class="song-title">N/A</span>
         <span class="song-role">Communion 2</span>
       </div>
       <div class="song-body">
         <p class="label">📺 Tutorial Video</p>
-        <div class="yt-embed">
-          <!-- YouTube video ID: C79EKm2tU74 -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/C79EKm2tU74?si=3vdTxwjV_V37gaWY"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="yt-no-video">
+          <span>🎬</span>
+          No tutorial video yet. YouTube video ID added here when available.
         </div>
         <div class="audio-section">
           <p class="label">🎵 Instrumental Practice Audio</p>
           <div class="audio-placeholder">
             <span class="upload-icon">🎼</span>
-            Instrumental file added here in the <code>audio/</code> folder,<br>
-            then block replaced with:<br>
-            <code>&lt;audio controls src="audio/song.mp3"&gt;&lt;/audio&gt;</code>
+            Instrumental audio is not available for this song.
+          </div>
+        </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box">
+            <pre>None</pre>
           </div>
         </div>
         <div class="lyrics-section">
@@ -673,32 +833,29 @@ Aking ikakalat
     <article class="song-card" id="song-13" style="animation-delay:0.65s">
       <div class="song-header">
         <span class="song-number">13</span>
-        <span class="song-title">Follow me, Follow me</span>
+        <span class="song-title">N/A</span>
         <span class="song-role">Recessional</span>
       </div>
       <div class="song-body">
         <p class="label">📺 Tutorial Video</p>
-        <div class="yt-embed">
-          <!-- YouTube video ID: sukMoxxFPbA -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/sukMoxxFPbA?si=d5uh5fZ0LVddE-8F"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="yt-embed">
-          <!-- YouTube video ID: sukMoxxFPbA -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/B6ttar521ZQ?si=TekuFV16-bzvjuXa"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="yt-no-video">
+          <span>🎬</span>
+          No tutorial video yet. YouTube video ID added here when available.
         </div>
         <div class="audio-section">
           <p class="label">🎵 Instrumental Practice Audio</p>
           <div class="audio-placeholder">
             <span class="upload-icon">🎼</span>
-            Instrumental file added here in the <code>audio/</code> folder,<br>
-            then block replaced with:<br>
-            <code>&lt;audio controls src="audio/song.mp3"&gt;&lt;/audio&gt;</code>
+            Instrumental audio is not available for this song.
+          </div>
+        </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box">
+            <pre>None</pre>
           </div>
         </div>
         <div class="lyrics-section">
@@ -785,9 +942,16 @@ Template for adding new songs:
           <p class="label">🎵 Instrumental Practice Audio</p>
           <div class="audio-placeholder">
             <span class="upload-icon">🎼</span>
-            Instrumental file added here in the <code>audio/</code> folder,<br>
-            then block replaced with:<br>
-            <code>&lt;audio controls src="audio/song.mp3"&gt;&lt;/audio&gt;</code>
+            Instrumental audio is not available for this song.
+          </div>
+        </div>
+        <div class="chords-section">
+          <p class="label">Chords</p>
+          <button class="chords-toggle" onclick="toggleChords(this)" aria-expanded="false">
+            <span>&#9660;</span> Show Chords
+          </button>
+          <div class="chords-box">
+            <pre>None</pre>
           </div>
         </div>
         <div class="lyrics-section">

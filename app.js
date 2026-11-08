@@ -21,6 +21,15 @@ function toggleLyrics(btn) {
     btn.lastChild.textContent = isOpen ? ' Hide Lyrics' : ' Show Lyrics';
 }
 
+/* ─── Chords toggle ─── */
+function toggleChords(btn) {
+    const box = btn.nextElementSibling;
+    const isOpen = box.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    btn.querySelector('span').textContent = isOpen ? '▲' : '▼';
+    btn.lastChild.textContent = isOpen ? ' Hide Chords' : ' Show Chords';
+}
+
 /* ─── Back to top button ─── */
 const backTop = document.getElementById('backTop');
 window.addEventListener('scroll', () => {
