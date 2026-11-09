@@ -264,6 +264,17 @@ header p.subtitle {
   transform: scale(0.97);
 }
 
+.btn-download-unavailable,
+.btn-download-unavailable:hover,
+.btn-download-unavailable:active {
+  background: #e5e7eb;
+  color: #6b7280;
+  border-color: #cbd5e1;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
 main {
   max-width: 960px;
   margin: 0 auto;
